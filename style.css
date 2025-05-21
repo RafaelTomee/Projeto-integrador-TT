@@ -70,7 +70,7 @@ body {
 
 .tab-btn.active {
     background-color: #FFE3C5;
-    color: #F17228;
+    color: #264653;
 }
 
 .input-icon {
@@ -78,7 +78,7 @@ body {
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
-    color: #F17228;
+    color: #264653;
 }
 
 .input-group input {
@@ -330,3 +330,135 @@ body {
   background-color: #264653;
 }
 
+.footer {
+  background: linear-gradient(to top, #e2d6cc, #ffffff);
+  padding: 50px 30px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #444;
+  border-top: 2px solid #8C503A;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.footer-col {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.footer h2, .footer h3 {
+  color: #8C503A;
+  margin-bottom: 10px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #444;
+  transition: 0.3s ease;
+}
+
+.footer a:hover {
+  color: #8C503A;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.social-icons img:hover {
+  filter: none;
+}
+
+.footer .copyright {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+
+.cart-sidebar {
+  width: 320px;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  z-index: 1050;
+  transition: transform 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+.cart-sidebar h3 {
+    margin-top: 0;
+}
+.cart-sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+.cart-sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.cart-sidebar.show {
+    transform: translateX(0);
+}
+
+.cart-items {
+    overflow-y: auto;
+    max-height: 50vh;
+}
+
+.btn-close {
+    background-color: #f8f9fa;
+    border: none;
+}
+
+#cart-items {
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+#cart-items::-webkit-scrollbar {
+  width: 6px;
+}
+#cart-items::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 8px;
+}
+
+.quantity-controls {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 2px 8px;
+    background: #f8f8f8;
+}
+
+.quantity-controls span {
+    min-width: 24px;
+    text-align: center;
+}
