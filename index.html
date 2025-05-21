@@ -21,25 +21,77 @@
             <div class="d-flex align-items-center">
                 <strong class="me-2">Entregar a:</strong>
                 <i class="fas fa-map-marker-alt me-2" style="color: #8C503A;"></i>
-
                 <span>Localização Atual <strong>Loanda/PR</strong></span>
             </div>
         </div>
 
         <div class="d-flex align-items-center">
+            <!-- Campo de busca -->
             <div class="input-group me-3">
                 <span class="input-group-text bg-white border-end-0">
                     <i class="fas fa-search" style="color: #8C503A;"></i>
-
                 </span>
                 <input type="text" class="form-control border-start-0" placeholder="Procurar">
             </div>
+
+            <!-- Ícone do carrinho com badge -->
+            <div class="position-relative me-3">
+                <a href="#" class="text-decoration-none" onclick="abrirCarrinho()">
+
+                    <i class="fas fa-shopping-cart fa-lg" style="color: #8C503A;"></i>
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+                        0
+                    </span>
+                </a>
+            </div>
+
+
+
+
+            <!-- <div id="cart-sidebar" class="cart-sidebar">
+                <h3>Seu Carrinho</h3>
+                <ul id="cart-items"></ul>
+                <p><strong>Total:</strong> R$<span id="cart-total">0.00</span></p>
+                <button onclick="fecharCarrinho()" class="btn btn-danger">Fechar</button>
+            </div> -->
+
+
+
+            <!-- Botão de Login -->
             <button class="btn btn-outline-warning d-flex align-items-center"
                 style="color: #8C503A; border: 1px solid #8C503A;">
                 <i class="fas fa-user me-2" style="color: #8C503A;"></i>Login
             </button>
         </div>
     </nav>
+
+    <!-- Aba lateral do carrinho -->
+    <div id="cart-sidebar" class="cart-sidebar hidden shadow-lg">
+        <div class="p-4 d-flex flex-column h-100 bg-white">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="m-0">🛒 Seu Carrinho</h4>
+                <button onclick="fecharCarrinho()" class="btn btn-danger btn-sm">X</button>
+
+            </div>
+
+            <div id="cart-items" class="flex-grow-1 mb-3 overflow-auto" style="max-height: 300px;"></div>
+
+            <div class="mb-3">
+                <p class="mb-1"><strong>Total:</strong> R$<span id="cart-total">0.00</span></p>
+            </div>
+
+            <div class="d-flex justify-content-between gap-2">
+                <button class="btn btn-success w-100" onclick="window.location.href='pagamento.html'">
+                    Finalizar compra
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+
 
 
     <section class="hero">
@@ -132,72 +184,96 @@
     </section>
 
     <section class="popular-items">
-  <h2>Popular items</h2>
-  <div class="carousel-wrapper">
-    <button class="carousel-btn left">&#10094;</button>
+        <h2>Itens populares</h2>
+        <div class="carousel-wrapper">
+            <button class="carousel-btn left">&#10094;</button>
 
-    <div class="carousel">
-      <div class="item">
-        <img src="img/tomate.jpg" alt="tomate">
-        <h3>Tomate</h3>
-        
-        <p class="price">R$3.88</p>
-        <button>Peça agora</button>
-      </div>
-      <div class="item">
-        <img src="img/cenoura.jpg" alt="Cenoura">
-        <h3>Cenoura</h3>
+            <div class="carousel">
+                <div class="item">
+                    <img src="img/tomate.jpg" alt="tomate">
+                    <h3>Tomate</h3>
+                    <p class="price">R$3.88</p>
+                    <button class="add-to-cart" data-name="Tomate" data-price="3.88">Peça agora</button>
+                </div>
 
-        <p class="price">R$4.00</p>
-        <button>Peça agora</button>
-      </div>
-      <div class="item">
-        <img src="img/laranja.jpg" alt="Laranja">
-        <h3>Laranja</h3>
+                <div class="item">
+                    <img src="img/cenoura.jpg" alt="Cenoura">
+                    <h3>Cenoura</h3>
+                    <p class="price">R$4.00</p>
+                    <button class="add-to-cart" data-name="Cenoura" data-price="4.00">Peça agora</button>
+                </div>
 
-        <p class="price">R$1.99</p>
-        <button>Peça agora</button>
-      </div>
+                <div class="item">
+                    <img src="img/laranja.jpg" alt="Laranja">
+                    <h3>Laranja</h3>
+                    <p class="price">R$1.99</p>
+                    <button class="add-to-cart" data-name="Laranja" data-price="1.99">Peça agora</button>
+                </div>
 
-      <div class="item">
-        <img src="img/limao.jpg" alt="Limão">
-        <h3>Limão</h3>
+                <div class="item">
+                    <img src="img/limao.jpg" alt="Limão">
+                    <h3>Limão</h3>
+                    <p class="price">R$1.99</p>
+                    <button class="add-to-cart" data-name="Limão" data-price="1.99">Peça agora</button>
+                </div>
 
-        <p class="price">R$1.99</p>
-        <button>Peça agora</button>
-      </div>
+                <div class="item">
+                    <img src="img/tomate-cereja.jpg" alt="Tomate Cereja">
+                    <h3>Tomate Cereja</h3>
+                    <p class="price">R$1.99</p>
+                    <button class="add-to-cart" data-name="Tomate Cereja" data-price="1.99">Peça agora</button>
+                </div>
 
-      <div class="item">
-        <img src="img/tomate-cereja.jpg" alt="Tomate Cereja">
-        <h3>Tomate Cereja</h3>
+                <div class="item">
+                    <img src="img/maça.webp" alt="Maça">
+                    <h3>Maça</h3>
+                    <p class="price">R$1.99</p>
+                    <button class="add-to-cart" data-name="Maça" data-price="1.99">Peça agora</button>
+                </div>
 
-        <p class="price">R$1.99</p>
-        <button>Peça agora</button>
-      </div>
+                <!-- Adicione mais itens conforme necessário -->
+            </div>
 
-      <div class="item">
-        <img src="img/maça.webp" alt="Maça">
-        <h3>Maça</h3>
+            <button class="carousel-btn right">&#10095;</button>
+        </div>
 
-        <p class="price">R$1.99</p>
-        <button>Peça agora</button>
-      </div>
-      <!-- Adicione mais itens conforme necessário -->
-    </div>
+        <div class="ver-mais-wrapper">
+            <button class="btn-ver-mais">
+                <strong>Ver Tudo</strong>
+                <i class="fas fa-angle-right ms-2"></i>
+            </button>
+        </div>
+    </section>
 
-    <button class="carousel-btn right">&#10095;</button>
-  </div>
+    <footer class="footer">
+        <div class="footer-container">
 
-  <div class="ver-mais-wrapper">
-  <button class="btn-ver-mais">
-    <strong>View All</strong>
-    <i class="fas fa-angle-right ms-2"></i>
-  </button>
-</div>
-</section>
+            <div class="footer-col">
+                <h2>Talento Tech</h2>
+                <p>Grupo 1: Porecatu
+                </p>
+                <p class="copyright">© Copyright <strong>Rafael Tomé da Silva</strong></p>
+            </div>
 
 
-<script src="carousel.js"></script>
+
+            <div class="footer-col">
+                <h3>Siga-nos</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+                </div>
+                <p>Siga-nos nas redes sociais.</p>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+    <script src="carousel.js"></script>
 </body>
 
 </html>
