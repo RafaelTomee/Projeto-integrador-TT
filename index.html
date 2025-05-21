@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-white px-4 py-2 justify-content-between">
+    <nav class="navbar navbar-light bg-white px-4 py-2 justify-content-between fixed-top">
         <div class="d-flex align-items-center">
             <a class="navbar-brand d-flex align-items-center me-4" href="#">
                 <img src="img/salada.png" height="32" class="me-2" alt="Logo">
@@ -48,16 +48,6 @@
 
 
 
-
-            <!-- <div id="cart-sidebar" class="cart-sidebar">
-                <h3>Seu Carrinho</h3>
-                <ul id="cart-items"></ul>
-                <p><strong>Total:</strong> R$<span id="cart-total">0.00</span></p>
-                <button onclick="fecharCarrinho()" class="btn btn-danger">Fechar</button>
-            </div> -->
-
-
-
             <!-- Botão de Login -->
             <button class="btn btn-outline-warning d-flex align-items-center"
                 style="color: #8C503A; border: 1px solid #8C503A;">
@@ -82,7 +72,7 @@
             </div>
 
             <div class="d-flex justify-content-between gap-2">
-                <button class="btn btn-success w-100" onclick="window.location.href='pagamento.html'">
+                <button class="btn btn-success w-100" onclick="finalizarCompra()">
                     Finalizar compra
                 </button>
             </div>
