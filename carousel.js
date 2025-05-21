@@ -93,3 +93,14 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
         adicionarAoCarrinho(nome, preco);
     });
 });
+
+function finalizarCompra() {
+    if (cart.length === 0) {
+        alert("O carrinho está vazio. Adicione itens antes de finalizar a compra.");
+        return;
+    }
+
+    localStorage.setItem('carrinho', JSON.stringify(cart));
+    // Redireciona se tiver itens
+    window.location.href = 'pagamento.html';
+}
