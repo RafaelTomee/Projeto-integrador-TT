@@ -1,0 +1,31 @@
+body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+    }
+    .hero {
+      background-color: #FFB30E;
+      color: white;
+      padding: 60px 20px;
+    }
+    .tab-btn.active {
+      background-color: #FFE3C5;
+      color: #F17228;
+    }
+    .input-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #F17228;
+    }
+    .input-group input {
+      padding-left: 36px;
+    }
+    .form-box {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 400px;
+      margin-top: 30px;
+    }
